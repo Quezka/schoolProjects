@@ -1,9 +1,12 @@
 #include <iostream>
+#include <map>
+
 using namespace std;
 
 void main() {
 	char veh;
 	int startHrs, startMins, finishHrs, finishMins, startTime, finishTime, time, remainder, price, cost;
+	map<char> vehicles = {}
 
 	cout << "Inserisci il veicolo selezionato:\n	M - motociclo;\n	B - bicicletta.\nVeicolo: ";
 	cin >> veh;
@@ -35,6 +38,7 @@ void main() {
 
 	cost = (time / 60) * price;
 
-	cout << "Il prezzo del noleggio del veicolo " << veh << " dalle " << startHrs << ":" << startMins << " alle " << finishHrs << ":" << finishMins << " (" << time / 60 << " ore) e' " << cost << "€"
+
+	cout << "Il prezzo del noleggio del veicolo " << veh << " (" << price << " euro/ora) dalle " << startHrs << ":" << startMins << " alle " << finishHrs << ":" << finishMins << " (" << time / 60 << " ore) e' " << cost << " euro." << endl;
 	system("pause");
 }
