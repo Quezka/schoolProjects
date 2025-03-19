@@ -38,22 +38,26 @@ int main() {
     
         switch (choice) {
             default: 
-                cout << "Scelta non riconosciuta! (" << choice << ").\n";
+                cout << "Scelta non riconosciuta! (" << choice << ")." << endl;
                 break;
             case 0:
                 cout << "Uscita...\n";
                 break;
             case 1:
-                cout << "Somma: " << x << " + " << y << " = " << summ(x, y) << endl;
+                cout << "Somma: " << x << " + " << y << " = " << x + y << endl;
                 break;
             case 2:
-                cout << "Differenza: " << x << " - " << y << " = " << diff(x, y) << endl;
+                cout << "Differenza: " << x << " - " << y << " = " << x - y << endl;
                 break;
             case 3:
-                cout << "Prodotto: " << x << " * " << y << " = " << multip(x, y) << endl;
+                cout << "Prodotto: " << x << " * " << y << " = " << x * y << endl;
                 break;
             case 4:
-                cout << "Divisione: " << x << " / " << y << " = " << division(x, y) << endl;
+                cout << "Divisione: " << x << " / " << y << " = " << x / y << endl;
+                break;
+            case 5:
+                cout << "Nuovi numeri." << endl;
+                break;
         }
 
         system("pause");
