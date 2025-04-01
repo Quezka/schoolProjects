@@ -6,13 +6,18 @@ My school projects. Usually in C++
 Funzione - insieme di istruzioni, racchiuse in un contenitore - Funzione - con un nome e che tornano un risultato (non sempre pero, dipende dal tipo della funzione).
 
 ```cpp
-// Dichiarazione
-int calcoloPotenza(x, y) {
-    int ris = 0;
+#include <iostream>
+#include <cmath>
+using namespace std;
 
-    return ris
+// Dichiarazione con variabili locali alla funzione
+int calcoloPotenza(int base, int exp) {
+    int res = 0;
+    res = pow(base, exp);
+
+    return res;
 }
 // La funzione ha: un tipo, un nome, dei parametri da mettere all'interno delle parentesi.
 // Chiamata di una funzione
-calcoloPotenza(1, 10);
+cout << calcoloPotenza(1, 10);
 ```
