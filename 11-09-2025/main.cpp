@@ -5,28 +5,31 @@ int minimo(int num1, int num2, int num3, int num4)
 {
     int args[4] = {num1, num2, num3, num4};
 
-    int minimo;
-    for (int i = 0; i < 4; i++)
+    int minimo = args[0];
+    for (int i = 1; i < 4; i++)
     {
-        if (args[i] < args[i + 1])
+        if (args[i] < minimo)
         {
             minimo = args[i];
-        }
-        else
-        {
-            if (i != 3)
-            {
-                minimo = args[i + 1]
-            }
-            else
-            {
-                minimo = args[3];
-            }
         }
     }
     return minimo;
 }
 
+int massimo(int num1, int num2, int num3, int num4) 
+{
+    int args[4] = {num1, num2, num3, num4};
+
+    int massimo = args[0];
+    for (int i = 0; i < 4; i++) 
+    {
+        if (args[i] > massimo) 
+        {
+            massimo = args[i];
+        }
+    }
+    return massimo;
+}
 int main()
 {
     int min, max, num1, num2, num3, num4;
@@ -41,6 +44,8 @@ int main()
 
     cout << "Elaborazione...\n";
     min = minimo(num1, num2, num3, num4);
+    max = massimo(num1, num2, num3, num4);
     cout << "Numero minimo: " << min << "\n";
+    cout << "Numero massimo: " << max << "\n";
     system("pause");
 }
