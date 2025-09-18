@@ -8,36 +8,38 @@ Il main visualizzerà la stringa risultato sullo schermo. */
 #include <string>
 using namespace std;
 
-string restituisci(string word)
+string restituisci(string word1, string word2)
 {
-    string result;
-    for (int i = 0; i < word.length(); i++)
+    string dispari, pari;
+    int j = 0;
+
+    for (int i = 1; i < word1.length(); i += 2)
     {
-        if (i % 2 == 0)
-        {
-            result += word.at(i);
-        }
-        else
-        {
-            result += word.at(i);
-        }
+        pari += word1.at(i);
     }
 
-    return result;
+    for (int j = 0; j < word2.length(); j +=2) {
+        dispari += word2.at(j);    
+    }
+
+    return pari + dispari;
 }
 
 int main()
 {
-    string word;
+    string word1, word2;
 
     system("cls");
 
     cout << "Composizione Stringa\n16-09-2025\n";
-    cout << "Inserisci una parola >> ";
-    cin >> word;
+
+    cout << "Inserisci la prima parola >> ";
+    cin >> word1;
+    cout << "Inserisci la seconda parola >> ";
+    cin >> word2;    
 
     cout << "Elaborazione...\n";
-    cout << "Stringa elaborata: " << restituisci(word) << "\n";
+    cout << "Stringa elaborata: " << restituisci(word1, word2) << "\n";
 
     system("pause");
     return 0;
