@@ -39,7 +39,7 @@ int main() {
     } else {
         cout << "\nI risultati sono diversi.\n";
     }
-    
+
     cout << "Finito!\n";
     system("pause");
     return 0;
