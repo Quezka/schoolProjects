@@ -49,5 +49,6 @@
         "typeinfo": "cpp"
     },
     "editor.formatOnSave": true,
-    "clang-format.executable": "/absolute/path/to/clang-format"
+    "clang-format.executable": "/absolute/path/to/clang-format",
+    "C_Cpp.default.compilerPath": "C:/msys64/ucrt64/bin/gcc.exe"
 }
