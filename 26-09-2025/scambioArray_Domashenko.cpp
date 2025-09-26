@@ -16,9 +16,14 @@ void scambiaMinMax(int arr[], int size)
     }
 
     // Scambia i valori
-    int temp = arr[minIndex];
-    arr[minIndex] = arr[maxIndex];
-    arr[maxIndex] = temp;
+    int val = arr[minIndex];
+    for (int i = 0; i < size; i++)
+    {
+        if (val == arr[i])
+        {
+            arr[i] = arr[maxIndex];
+        }
+    }
 }
 
 int main()
