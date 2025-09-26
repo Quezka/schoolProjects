@@ -15,6 +15,21 @@ string matrix[rows][cols];
 
 int countOccs(string matrix[rows][cols], char control)
 {
+    int count = 0;
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            for (int m = 0; m < matrix[i][j].length(); m++)
+            {
+                if (matrix[i][j][m] == control)
+                    count++;
+            }
+        }
+    }
+
+    return count;
 }
 
 int main()
@@ -46,7 +61,8 @@ int main()
     cin >> x;
 
     cout << "Elaborazione...\n";
-    countOccs(matrix, x);
+    int result = countOccs(matrix, x);
+    cout << "Carattere '" << x << "' trovato: " << result << " volte.\n";
     system("pause");
     return 0;
 }
