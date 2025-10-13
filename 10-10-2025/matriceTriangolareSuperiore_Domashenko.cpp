@@ -47,7 +47,7 @@ int main()
     {
         for (int j = 0; j < cols; j++)
         {
-            a[i][j] = rand() % (200 - (-10) + 1) + (-10);
+            a[i][j] = rand() % 211 - 10;
             cout << a[i][j] << "\t";
         }
         cout << "\n\n";
