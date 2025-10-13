@@ -42,21 +42,12 @@ int main()
     system("cls");
     int a[rows][cols];
 
-    cout << "Inserisci la matrice:\n";
+    cout << "Generazione della matrice:\n";
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
         {
-            cout << "Inserisci elemento: ";
-            cin >> a[i][j];
-        }
-    }
-
-    cout << "Matrice inserita:\n";
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < cols; j++)
-        {
+            a[i][j] = rand() % (200 - (-10) + 1) + (-10);
             cout << a[i][j] << "\t";
         }
         cout << "\n\n";
