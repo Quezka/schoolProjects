@@ -23,15 +23,20 @@ float avg(vector<int> nums)
 int main()
 {
     vector<int> nums;
+    int n;
+
     srand(time(NULL));
     system("cls");
 
+    cout << "Inserisci la quantita' dei numeri nel vector: ";
+    cin >> n;
+
     cout << "Inserimento vector...\n";
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < n; i++)
     {
         int num = rand() % 51;
         nums.push_back(num);
-        if (i != 3)
+        if (i != n - 1)
         {
             cout << nums.at(i) << ",\t";
         }
