@@ -10,7 +10,7 @@ using namespace std;
 
 float avg(vector<int> nums)
 {
-    float avg;
+    float avg = 0;
 
     for (int num : nums)
     {
@@ -36,14 +36,7 @@ int main()
     {
         int num = rand() % 51;
         nums.push_back(num);
-        if (i != n - 1)
-        {
-            cout << nums.at(i) << ",\t";
-        }
-        else
-        {
-            cout << nums.at(i) << ".";
-        }
+        cout << nums.at(i) << "\t";
     }
 
     cout << "\nElaborazione...\n";
