@@ -10,15 +10,32 @@ Per ogni stringa del vettore prende il carattere indicato dal corrispondente val
 #include <time.h>
 using namespace std;
 
+int qty;
+
 string func(vector<int> nums, vector<string> words)
 {
+    string word;
+    string res = "";
+    int pos;
+
+    for (int i = 0; i < qty; i++)
+    {
+        word = words.at(i);
+        pos = nums.at(i);
+
+        if (pos < word.length())
+        {
+
+            res += word.at(pos - 1);
+        }
+    }
+
+    return res;
 }
 
 int main()
 {
     srand(time(NULL));
-
-    int qty;
     string word;
     vector<int> nums;
     vector<string> words;
@@ -27,16 +44,25 @@ int main()
     cin >> qty;
 
     cout << "Generazione vettore numeri...\n";
-    for (int i = 0; i < qty; i++ {
-        nums.push_back(rand() % 7 + 1)
-                cout
-            << nums.at(i) << "\t";
+    for (int i = 0; i < qty; i++)
+    {
+        nums.push_back(rand() % 7 + 1);
+        cout << nums.at(i) << "\t";
     }
 
-    cout << "Inserisci un vettore di parole lunghe almeno 10 caratteri:\n";
-    for (int i = 0; i < qty; i++) {
+    cout << "\nInserisci un vettore di parole lunghe almeno 10 caratteri:\n";
+    for (int i = 0; i < qty; i++)
+    {
         cout << "Inserisci una parola (lunghezza > 10 caratteri): ";
         cin >> word;
         words.push_back(word);
     }
+
+    cout << "Elaborazione...\n";
+    cout << "Il risultato finale e': " << func(nums, words) << ".\n";
+
+    cout << "Fine.\n";
+    system("pause");
+    system("cls");
+    return 0;
 }
