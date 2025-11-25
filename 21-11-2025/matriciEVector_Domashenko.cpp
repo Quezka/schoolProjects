@@ -4,10 +4,10 @@
 #define cols 3
 using namespace std;
 
-vector<int> func(int arr[rows], int mat[rows][cols])
+int func(int arr[rows], int mat[rows][cols])
 {
     int k;
-    int elem = 0;
+    int elem = 0, ret = 0;
     vector<int> res;
     for (int j = 0; j < cols; j++)
     {
@@ -21,14 +21,19 @@ vector<int> func(int arr[rows], int mat[rows][cols])
         res.push_back(elem);
     }
 
-    return res;
+    for (int num : res)
+    {
+        ret += num;
+    }
+
+    return ret;
 }
 
 int main()
 {
     system("cls");
 
-    vector<int> res;
+    int res;
     int mat[rows][cols], arr[rows];
 
     cout << "Inserisci un vettore:\n";
@@ -52,12 +57,7 @@ int main()
 
     res = func(arr, mat);
 
-    cout << "Il vettore risultato e':\n";
-    for (int num : res)
-    {
-        cout << num << "\t";
-    }
-    cout << "\n";
+    cout << "Il risultato e': " << res << ".\n";
 
     system("pause");
     system("cls");
