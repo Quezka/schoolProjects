@@ -4,6 +4,8 @@
 #define cols 3
 using namespace std;
 
+// Domashenko
+
 int func(int arr[rows], int mat[rows][cols])
 {
     int k;
