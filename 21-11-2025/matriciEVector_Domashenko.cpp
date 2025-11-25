@@ -15,8 +15,6 @@ vector<int> func(vector<int> vect, int mat[rows][cols])
         elem = 0;
         for (int i = 0; i < rows; i++)
         {
-            cout << "Elem:" << elem << "; vect.at(k): " << vect.at(k) << "; mat[i][j]: " << mat[i][j] << "\n";
-
             elem += vect.at(k) * mat[i][j];
             k++;
         }
