@@ -53,6 +53,16 @@ int main()
         }
     }
 
+    cout << "Matrice inserita:\n";
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            cout << mat[i][j] << "\t";
+        }
+        cout << "\n\n";
+    }
+
     cout << "Elaborazione...\n";
 
     res = func(arr, mat);
