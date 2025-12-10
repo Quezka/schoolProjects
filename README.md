@@ -1,5 +1,5 @@
 # schoolProjects
-My school projects. Usually in C++
+My school projects. Usually in C++ and Java
 
 # Docs
 ## Funzioni
